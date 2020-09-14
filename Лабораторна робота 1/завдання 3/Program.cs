@@ -8,7 +8,7 @@ namespace завдання_3
 {
     class Book
     {
-
+        public string name;
     }
 
     class Title
