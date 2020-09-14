@@ -1,0 +1,6 @@
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.exe.config
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.exe
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.pdb
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.exe
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.pdb
