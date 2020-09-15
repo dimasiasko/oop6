@@ -8,45 +8,39 @@ namespace завдання_4
 {
     class Point
     {
-        public string field;
-        public int number1;
-        public int number2;
-
-        public int Number1
+        string name;
+        int x, y;
+        public int X
         {
             get
             {
-                return number1;
+                return x;
             }
         }
-        public int Number2
+        public int Y
         {
             get
             {
-                return number2;
+                return y;
             }
         }
-        public string Field
+        public string Name
         {
             get
             {
-                return field;
+                return name;
             }
         }
-
         public Point()
             : this("", 0, 0) { }
-
-        public Point(string field, int number1, int number2)
+        public Point(string name, int x, int y)
         {
-            Console.WriteLine("Введите Point:");
-            this.field = Console.ReadLine();
-
-            Console.WriteLine("Введите первое число: ");
-            this.number1 = int.Parse(Console.ReadLine());
-
-            Console.WriteLine("Введите второе число: ");
-            this.number2 = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter a letter of Point:");
+            //this.name = Console.ReadLine();
+            Console.WriteLine("Введите коорд. точки A: ");
+            this.x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите коорд. точки B: ");
+            this.y = int.Parse(Console.ReadLine());
         }
     }
     class Figure
@@ -67,9 +61,10 @@ namespace завдання_4
         }
         public void InitializeFigure()
         {
-            Console.WriteLine("Введите количество вершин фигуры: ");
-            number = int.Parse(Console.ReadLine());
-
+            Console.WriteLine("Введите количество вершин вашей фигуры: ");
+            number = int.Parse(Console.ReadLine());          
+            Console.WriteLine($"Ваша фигура - {number}-угольник");
+            
             points = new Point[number];
             for (int i = 0; i < points.Length; i++)
             {
@@ -79,10 +74,9 @@ namespace завдання_4
         }
         public double LengthSide(Point a, Point b)
         {
-            return Math.Sqrt(Math.Pow(a.number1 - b.number1, 2) + Math.Pow(a.number2 - b.number2, 2));
+            return Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
         }
-
-        public double CalculatePerimeter()
+        public double PerimeterCalculator()
         {
             double perimeter = 0;
             for (int i = 1; i < points.Length; i++)
@@ -92,19 +86,20 @@ namespace завдання_4
             perimeter += this.LengthSide(points[0], points[points.Length - 1]);
             return perimeter;
         }
-        public Figure(string name)
+        public Figure()
         {
             InitializeFigure();
         }
     }
 
+
     class Program
     {
         static void Main(string[] args)
         {
-            Figure cube = new Figure("cube");
-            Console.WriteLine(cube.CalculatePerimeter());
-            Console.ReadKey();
+            Figure cube = new Figure();
+            Console.WriteLine("Периметр = " + cube.PerimeterCalculator());
+            
         }
     }
 }
