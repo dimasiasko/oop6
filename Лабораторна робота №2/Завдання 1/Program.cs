@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 
 namespace Завдання_1
 {
@@ -6,7 +7,8 @@ namespace Завдання_1
     {
         public virtual void Outputer(string line)
         {
-            Console.WriteLine($"{line} и его тип = {line.GetType()}");
+            Debug.WriteLine(($"{line} и его тип = {line.GetType()}"));
+            
         }
     }
     internal class OutputGreen : Output
