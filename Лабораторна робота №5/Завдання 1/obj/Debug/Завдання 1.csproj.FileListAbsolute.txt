@@ -1,0 +1,10 @@
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\bin\Debug\Завдання 1.exe.config
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\bin\Debug\Завдання 1.exe
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\bin\Debug\Завдання 1.pdb
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.csprojAssemblyReference.cache
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання_1.Form1.resources
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання_1.Properties.Resources.resources
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.csproj.GenerateResource.cache
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.csproj.CoreCompileInputs.cache
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.exe
+D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.pdb
