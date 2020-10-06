@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30517.126
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Завдання 1", "Завдання 1\Завдання 1.csproj", "{636A1037-76FA-414F-B3CC-67B8623888D9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Завдання 2", "Завдання 2\Завдання 2.csproj", "{4E6BEE9E-8337-4E4C-95F6-3D6F0E0892F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{636A1037-76FA-414F-B3CC-67B8623888D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{636A1037-76FA-414F-B3CC-67B8623888D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{636A1037-76FA-414F-B3CC-67B8623888D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E6BEE9E-8337-4E4C-95F6-3D6F0E0892F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E6BEE9E-8337-4E4C-95F6-3D6F0E0892F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E6BEE9E-8337-4E4C-95F6-3D6F0E0892F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E6BEE9E-8337-4E4C-95F6-3D6F0E0892F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

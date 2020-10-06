@@ -8,3 +8,13 @@ D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug
 D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.csproj.CoreCompileInputs.cache
 D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.exe
 D:\c#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.pdb
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\bin\Debug\Завдання 1.exe.config
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\bin\Debug\Завдання 1.exe
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\bin\Debug\Завдання 1.pdb
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.csprojAssemblyReference.cache
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання_1.Form1.resources
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання_1.Properties.Resources.resources
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.csproj.GenerateResource.cache
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.csproj.CoreCompileInputs.cache
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.exe
+D:\лабкі с#\oop6\Лабораторна робота №5\Завдання 1\obj\Debug\Завдання 1.pdb
