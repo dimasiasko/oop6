@@ -34,7 +34,7 @@ namespace Завдання_2
                             cone.Area();
                             return;
                         }
-                        if (option == 2)
+                        else if (option == 2)
                         {
                             Console.WriteLine("Введите радиус верхнего основания: ");
                             double smallR = double.Parse(Console.ReadLine());
