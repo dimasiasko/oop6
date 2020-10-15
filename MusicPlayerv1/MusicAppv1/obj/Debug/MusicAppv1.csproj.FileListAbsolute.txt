@@ -1,0 +1,15 @@
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\bin\Debug\MusicAppv1.exe.config
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\bin\Debug\MusicAppv1.exe
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\bin\Debug\MusicAppv1.pdb
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csprojAssemblyReference.cache
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.MusicPlayerApp.resources
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.Properties.Resources.resources
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csproj.GenerateResource.cache
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.exe
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.pdb
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\bin\Debug\Interop.WMPLib.dll
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\Interop.WMPLib.dll
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csproj.ResolveComReference.cache
