@@ -13,3 +13,18 @@ C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\bin\D
 C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\Interop.WMPLib.dll
 C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Дмитрий Сясько\source\repos\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csproj.ResolveComReference.cache
+D:\oop6\MusicPlayerv1\MusicAppv1\bin\Debug\MusicAppv1.exe.config
+D:\oop6\MusicPlayerv1\MusicAppv1\bin\Debug\MusicAppv1.exe
+D:\oop6\MusicPlayerv1\MusicAppv1\bin\Debug\MusicAppv1.pdb
+D:\oop6\MusicPlayerv1\MusicAppv1\bin\Debug\Interop.WMPLib.dll
+D:\oop6\MusicPlayerv1\MusicAppv1\bin\Debug\AxInterop.WMPLib.dll
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csprojAssemblyReference.cache
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\Interop.WMPLib.dll
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\AxInterop.WMPLib.dll
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csproj.ResolveComReference.cache
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.MusicPlayerApp.resources
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.Properties.Resources.resources
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csproj.GenerateResource.cache
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.csproj.CoreCompileInputs.cache
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.exe
+D:\oop6\MusicPlayerv1\MusicAppv1\obj\Debug\MusicAppv1.pdb

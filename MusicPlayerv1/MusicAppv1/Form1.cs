@@ -120,24 +120,6 @@ namespace MusicAppv1
             lastPoint = new Point(e.X, e.Y);
         }
 
-        private void listBoxSongs_MouseUp(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void listBoxSongs_MouseDown(object sender, MouseEventArgs e)
-        {
-
-        }
         
-        private void listBoxSongs_PreviewKeyDown(object sender,  PreviewKeyDownEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                listBoxSongs.Items.RemoveAt(listBoxSongs.SelectedIndex);
-                
-            }
-            
-        }
     }
 }

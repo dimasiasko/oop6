@@ -95,9 +95,7 @@
             this.listBoxSongs.TabIndex = 1;
             this.listBoxSongs.SelectedIndexChanged += new System.EventHandler(this.listBoxSongs_SelectedIndexChanged);
             this.listBoxSongs.DragEnter += new System.Windows.Forms.DragEventHandler(this.listBoxSongs_DragEnter);
-            this.listBoxSongs.MouseDown += new System.Windows.Forms.MouseEventHandler(this.listBoxSongs_MouseDown);
-            this.listBoxSongs.MouseUp += new System.Windows.Forms.MouseEventHandler(this.listBoxSongs_MouseUp);
-            this.listBoxSongs.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.listBoxSongs_PreviewKeyDown);
+            
             // 
             // contextMenuStrip1
             // 
