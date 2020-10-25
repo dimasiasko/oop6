@@ -33,17 +33,24 @@ namespace MusicAppv1
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                
                 files = openFileDialog.SafeFileNames; // Сохраняет имена файлов в массив 
                 paths = openFileDialog.FileNames; // Сохраняет пути к трекам в массив
 
                 label1.Hide(); // скрывает текст
 
-                // Отобразить имена треков в листбоксе
-                for (int i = 0; i < files.Length; i++)
+                for (int i = 0; i < paths.Length; i++)
                 {
-                    listBoxSongs.Items.Add(files[i]); // отображаем треки в листбоксе
-                }
+                    switch (Path.GetExtension(paths[i]))
+                    {
+                        case ".mp3":
+                        case ".wav":
+                            listBoxSongs.Items.Add(files[i]); // Отобразить имена треков в листбоксе
+                            break;
+                        default:
+                            MessageBox.Show($"Файл {files[i]} имеет неверный формат !");
+                            break;
+                    }
+                }             
             }
             else if (openFileDialog.ShowDialog() ==  DialogResult.Cancel)
             {
@@ -60,12 +67,8 @@ namespace MusicAppv1
 
         private void listBoxSongs_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // код который проигрывает музыку
-           
-            axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
-            
-                  
-            
+            // код который проигрывает музыку           
+            axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];           
         }
 
         private void listBoxSongs_DragEnter(object sender, DragEventArgs e)
