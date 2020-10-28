@@ -147,7 +147,20 @@ namespace MusicAppv1
         ///////////////////////////////////////////
 
         ToolStripMenuItem menuItem = new ToolStripMenuItem("Удалить");
-        
+
+        private void listBoxSongs_Click(object sender, EventArgs e)
+        {
+            if (axWindowsMediaPlayerMusic.isOnline)
+            {
+                axWindowsMediaPlayerMusic.Ctlcontrols.play();
+            }
+            else if (listBoxSongs.SelectedIndex == -1)
+            {
+                listBoxSongs.SelectedIndex = 0;
+            }
+                      
+        }
+
         private void listBoxSongs_MouseClick(object sender, MouseEventArgs e)
         {
             //if (e.Button == MouseButtons.Right)
@@ -158,14 +171,13 @@ namespace MusicAppv1
             //    }
             //    contextMenuStrip1.Show();
             //}
-            contextMenuStrip1.Items.Add(menuItem);
-            if (e.Button == MouseButtons.Left && listBoxSongs.SelectedItem == null )
-            {
-                return;
-            }
+            contextMenuStrip1.Items.Add(toolStripMenuItem1);
+
+            
+
             if (e.Button == MouseButtons.Right)
             {
-                if (listBoxSongs.SelectedItem == null) return;
+                if (listBoxSongs.SelectedIndex == -1) return;
 
                 Rectangle itemRect = listBoxSongs.GetItemRectangle(listBoxSongs.SelectedIndex);
                 if (itemRect.Contains(e.Location))
@@ -182,5 +194,95 @@ namespace MusicAppv1
         {
 
         }
+
+        
+
+        
+
+        // клик по кнопке - играть, анимация нажатия
+        private void PlayButton_Click(object sender, EventArgs e)
+        {
+            
+            axWindowsMediaPlayerMusic.Ctlcontrols.play();
+        }
+
+        private void PlayButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            PlayButton.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void PlayButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            PlayButton.BorderStyle = BorderStyle.FixedSingle;
+        }
+        
+        // клик по кнопке - стоп, анимация нажатия
+        private void StopButton_Click(object sender, EventArgs e)
+        {
+            axWindowsMediaPlayerMusic.Ctlcontrols.pause();
+        }
+        private void StopButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            PauseButton.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void StopButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            PauseButton.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        // метод для следующих треков в плейлисте и - анимация нажатия
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            if ((listBoxSongs.SelectedIndex + 1) >= paths.Count)
+            {
+                listBoxSongs.SelectedIndex = 0;
+                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
+            }
+            else
+            {
+                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex + 1];
+                listBoxSongs.SelectedIndex += 1;
+            }
+            
+        }
+
+        private void NextButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            NextButton.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void NextButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            NextButton.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        // метод для предыдущих треков в плейлисте и - анимация нажатия
+        private void PreviousButton_Click(object sender, EventArgs e)
+        {
+            if ((listBoxSongs.SelectedIndex - 1) == -1)
+            {
+                listBoxSongs.SelectedIndex = paths.Count - 1;
+                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
+            }
+            else
+            {
+                
+                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex - 1];
+                listBoxSongs.SelectedIndex -= 1;
+            }
+        }
+
+        private void PreviousButton_MouseDown(object sender, MouseEventArgs e)
+        {
+            PreviousButton.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void PreviousButton_MouseUp(object sender, MouseEventArgs e)
+        {
+            PreviousButton.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        
     }
 }

@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -99,7 +100,19 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="icons\" />
+    <None Include="icons\icons8-пауза-в-кружке-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\icons8-начало-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\icons8-стоп-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\icons8-шеврон-влево-в-круге-96.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="icons\icons8-шеврон-вправо-в-круге-96.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
