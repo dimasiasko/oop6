@@ -51,7 +51,7 @@ namespace MusicAppv1
                     paths.Add(pathsNew[i]);
                 }
 
-                label1.Hide(); // скрывает текст
+                labelChoosing.Hide(); // скрывает текст
 
 
                 for (int i = 0; i < filesNew.Length; i++)
@@ -98,7 +98,7 @@ namespace MusicAppv1
         }
         private void label1_DragEnter(object sender, DragEventArgs e)
         {
-            label1.Hide();
+            labelChoosing.Hide();
             
             btnSelectSongs_Click(sender, e); // при перетаскивании файлов вызывает окно выбора файлов
         }
@@ -146,58 +146,22 @@ namespace MusicAppv1
 
         ///////////////////////////////////////////
 
-        ToolStripMenuItem menuItem = new ToolStripMenuItem("Удалить");
+        
 
         private void listBoxSongs_Click(object sender, EventArgs e)
         {
-            if (axWindowsMediaPlayerMusic.isOnline)
-            {
-                axWindowsMediaPlayerMusic.Ctlcontrols.play();
-            }
-            else if (listBoxSongs.SelectedIndex == -1)
-            {
-                listBoxSongs.SelectedIndex = 0;
-            }
-                      
+            if (listBoxSongs.SelectedIndex == -1)            
+                listBoxSongs.SelectedIndex = 0;                     
         }
-
+        
+        
+        
+        
         private void listBoxSongs_MouseClick(object sender, MouseEventArgs e)
         {
-            //if (e.Button == MouseButtons.Right)
-            //{
-            //    if (e.Button == )
-            //    {
-
-            //    }
-            //    contextMenuStrip1.Show();
-            //}
-            contextMenuStrip1.Items.Add(toolStripMenuItem1);
-
-            
-
-            if (e.Button == MouseButtons.Right)
-            {
-                if (listBoxSongs.SelectedIndex == -1) return;
-
-                Rectangle itemRect = listBoxSongs.GetItemRectangle(listBoxSongs.SelectedIndex);
-                if (itemRect.Contains(e.Location))
-                {
-                    contextMenuStrip1.Show();
-                }
-                
-                
-            }
             
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        
 
         // клик по кнопке - играть, анимация нажатия
         private void PlayButton_Click(object sender, EventArgs e)
@@ -283,6 +247,41 @@ namespace MusicAppv1
             PreviousButton.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        
+        // автоматическое переключения треков на следующий при заканчивании проигрывания
+        private void timerPlaying_Tick(object sender, EventArgs e)
+        {
+            timerPlaying.Enabled = false;
+            NextButton_Click(sender, e);
+        }
+
+        private void axWindowsMediaPlayerMusic_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
+        {
+            if (e.newState == 8)
+            {
+                timerPlaying.Enabled = true;
+            }
+        }
+
+        private void listBoxSongs_MouseDown(object sender, MouseEventArgs e)
+        {
+            //ContextMenuStrip contextMenu = new ContextMenuStrip();
+            //ToolStripMenuItem toolStripMenuItem = new ToolStripMenuItem("Удалить");
+
+            //contextMenu.Items.Add(toolStripMenuItem);
+            Rectangle itemRect = listBoxSongs.GetItemRectangle(listBoxSongs.SelectedIndex);
+
+            if (listBoxSongs.SelectedItem == null) return;
+
+
+            if (e.Button == MouseButtons.Right)
+            {
+                if (itemRect.Contains(e.Location))
+                {
+                    
+                    contextMenu.Show();
+                }            
+            }
+            
+        }
     }
 }
