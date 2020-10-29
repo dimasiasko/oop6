@@ -83,6 +83,16 @@ namespace MusicAppv1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_перемешать_64 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-перемешать-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_стоп_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-стоп-96", resourceCulture);

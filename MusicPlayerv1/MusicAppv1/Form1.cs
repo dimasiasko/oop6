@@ -154,15 +154,7 @@ namespace MusicAppv1
                 listBoxSongs.SelectedIndex = 0;                     
         }
         
-        
-        
-        
-        private void listBoxSongs_MouseClick(object sender, MouseEventArgs e)
-        {
-            
-        }
-
-
+       
         // клик по кнопке - играть, анимация нажатия
         private void PlayButton_Click(object sender, EventArgs e)
         {
@@ -195,20 +187,35 @@ namespace MusicAppv1
             PauseButton.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        // метод для следующих треков в плейлисте и - анимация нажатия
+        // метод для следующих треков (в том числе и при нажатой кнопке "рандом") в плейлисте и - анимация нажатия
+       
+        List<int> tempIndex = new List<int>();
+        
         private void NextButton_Click(object sender, EventArgs e)
         {
-            if ((listBoxSongs.SelectedIndex + 1) >= paths.Count)
+            if (mixTracksButton.BorderStyle == BorderStyle.FixedSingle)
             {
-                listBoxSongs.SelectedIndex = 0;
-                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
+                if ((listBoxSongs.SelectedIndex + 1) >= paths.Count)
+                {
+                    listBoxSongs.SelectedIndex = 0;
+                    axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
+                }
+                else
+                {
+                    axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex + 1];
+                    listBoxSongs.SelectedIndex += 1;
+                }
             }
             else
             {
-                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex + 1];
-                listBoxSongs.SelectedIndex += 1;
-            }
-            
+                Random rnd = new Random();
+                int nowPlayIndex = rnd.Next(paths.Count);
+
+                tempIndex.Add(nowPlayIndex);
+                
+                axWindowsMediaPlayerMusic.URL = paths[nowPlayIndex];
+                listBoxSongs.SelectedIndex = nowPlayIndex;              
+            }                       
         }
 
         private void NextButton_MouseDown(object sender, MouseEventArgs e)
@@ -221,19 +228,32 @@ namespace MusicAppv1
             NextButton.BorderStyle = BorderStyle.FixedSingle;
         }
 
-        // метод для предыдущих треков в плейлисте и - анимация нажатия
+        int count = 2;
+        // метод для предыдущих треков в плейлисте(и предыдущих в том числе) и - анимация нажатия
         private void PreviousButton_Click(object sender, EventArgs e)
         {
-            if ((listBoxSongs.SelectedIndex - 1) == -1)
+            if (mixTracksButton.BorderStyle == BorderStyle.FixedSingle)
             {
-                listBoxSongs.SelectedIndex = paths.Count - 1;
-                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
+                if ((listBoxSongs.SelectedIndex - 1) == -1)
+                {
+                    listBoxSongs.SelectedIndex = paths.Count - 1;
+                    axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
+                }
+                else
+                {
+                    axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex - 1];
+                    listBoxSongs.SelectedIndex -= 1;
+                }
             }
             else
-            {
-                
-                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex - 1];
-                listBoxSongs.SelectedIndex -= 1;
+            {           
+                int[] lastPlayIndex = tempIndex.ToArray();
+                listBoxSongs.SelectedIndex = lastPlayIndex[tempIndex.Count- count];
+                axWindowsMediaPlayerMusic.URL = paths[listBoxSongs.SelectedIndex];
+                while (tempIndex.Count > count)
+                {
+                    count++;
+                }              
             }
         }
 
@@ -262,26 +282,58 @@ namespace MusicAppv1
             }
         }
 
+        // вызов контекстного меню при нажатии ИМЕННО на элемент правой кнопкой мыши
         private void listBoxSongs_MouseDown(object sender, MouseEventArgs e)
         {
-            //ContextMenuStrip contextMenu = new ContextMenuStrip();
-            //ToolStripMenuItem toolStripMenuItem = new ToolStripMenuItem("Удалить");
-
-            //contextMenu.Items.Add(toolStripMenuItem);
-            Rectangle itemRect = listBoxSongs.GetItemRectangle(listBoxSongs.SelectedIndex);
-
-            if (listBoxSongs.SelectedItem == null) return;
-
-
+            if (listBoxSongs.SelectedIndex == -1)
+            {
+                listBoxSongs_Click(sender, e);
+            }
             if (e.Button == MouseButtons.Right)
             {
+                Rectangle itemRect = listBoxSongs.GetItemRectangle(listBoxSongs.SelectedIndex);
                 if (itemRect.Contains(e.Location))
                 {
-                    
-                    contextMenu.Show();
+                    Point point = MousePosition;
+                    contextMenu.Show(point);
                 }            
+            }                      
+        }
+
+        // клик по кнопке перемешать треки
+        private void mixTracksButton_Click(object sender, EventArgs e)
+        {
+            if (mixTracksButton.BorderStyle == BorderStyle.FixedSingle)
+            {
+                mixTracksButton.BorderStyle = BorderStyle.Fixed3D;
+                tempIndex.Add(listBoxSongs.SelectedIndex);
             }
-            
+            else
+            {
+                mixTracksButton.BorderStyle = BorderStyle.FixedSingle;
+            }            
+        }
+
+        // удаление элементов в листбоксе
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {          
+                int tI = listBoxSongs.SelectedIndex;
+                paths.RemoveAt(tI);
+                files.RemoveAt(tI);
+                listBoxSongs.Items.RemoveAt(tI);
+
+                for (int i = tI; i < paths.Count - tI; i++)
+                {
+                    listBoxSongs.Items[i] = listBoxSongs.Items[i + 1];
+                    paths[i] = paths[i + 1];
+                    files[i] = files[i + 1];
+                }           
+        }
+
+        private void listBoxSongs_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyData == Keys.Delete)           
+                buttonDelete_Click(sender, e);           
         }
     }
 }
