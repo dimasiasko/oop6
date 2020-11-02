@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicPlayerApp));
             this.TopPanel = new System.Windows.Forms.Panel();
-            this.buttonExit = new System.Windows.Forms.PictureBox();
             this.IblLogo = new System.Windows.Forms.Label();
             this.listBoxSongs = new System.Windows.Forms.ListBox();
             this.btnSelectSongs = new System.Windows.Forms.Button();
@@ -40,20 +39,25 @@
             this.timerPlaying = new System.Windows.Forms.Timer(this.components);
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.buttonDelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.downButton = new System.Windows.Forms.PictureBox();
+            this.upButton = new System.Windows.Forms.PictureBox();
             this.mixTracksButton = new System.Windows.Forms.PictureBox();
             this.NextButton = new System.Windows.Forms.PictureBox();
             this.PreviousButton = new System.Windows.Forms.PictureBox();
             this.PauseButton = new System.Windows.Forms.PictureBox();
             this.PlayButton = new System.Windows.Forms.PictureBox();
+            this.buttonExit = new System.Windows.Forms.PictureBox();
             this.TopPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerMusic)).BeginInit();
             this.contextMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.downButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mixTracksButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NextButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreviousButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -70,20 +74,6 @@
             this.TopPanel.TabIndex = 0;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.DarkViolet;
-            this.buttonExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
-            this.buttonExit.Location = new System.Drawing.Point(260, 3);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(26, 24);
-            this.buttonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.buttonExit.TabIndex = 1;
-            this.buttonExit.TabStop = false;
-            this.buttonExit.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // IblLogo
             // 
@@ -106,7 +96,6 @@
             this.listBoxSongs.Location = new System.Drawing.Point(15, 188);
             this.listBoxSongs.Name = "listBoxSongs";
             this.listBoxSongs.Size = new System.Drawing.Size(255, 260);
-            this.listBoxSongs.Sorted = true;
             this.listBoxSongs.TabIndex = 1;
             this.listBoxSongs.Click += new System.EventHandler(this.listBoxSongs_Click);
             this.listBoxSongs.SelectedIndexChanged += new System.EventHandler(this.listBoxSongs_SelectedIndexChanged);
@@ -169,9 +158,37 @@
             // buttonDelete
             // 
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(180, 22);
+            this.buttonDelete.Size = new System.Drawing.Size(118, 22);
             this.buttonDelete.Text = "Удалить";
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
+            // downButton
+            // 
+            this.downButton.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.downButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.downButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.downButton.Image = global::MusicAppv1.Properties.Resources.DownButton;
+            this.downButton.Location = new System.Drawing.Point(203, 448);
+            this.downButton.Margin = new System.Windows.Forms.Padding(0);
+            this.downButton.Name = "downButton";
+            this.downButton.Size = new System.Drawing.Size(32, 27);
+            this.downButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.downButton.TabIndex = 12;
+            this.downButton.TabStop = false;
+            // 
+            // upButton
+            // 
+            this.upButton.BackColor = System.Drawing.Color.BlanchedAlmond;
+            this.upButton.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.upButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.upButton.Image = global::MusicAppv1.Properties.Resources.Upbutton;
+            this.upButton.Location = new System.Drawing.Point(175, 448);
+            this.upButton.Margin = new System.Windows.Forms.Padding(0);
+            this.upButton.Name = "upButton";
+            this.upButton.Size = new System.Drawing.Size(28, 27);
+            this.upButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.upButton.TabIndex = 11;
+            this.upButton.TabStop = false;
             // 
             // mixTracksButton
             // 
@@ -256,12 +273,28 @@
             this.PlayButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlayButton_MouseDown);
             this.PlayButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PlayButton_MouseUp);
             // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.DarkViolet;
+            this.buttonExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
+            this.buttonExit.Location = new System.Drawing.Point(260, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(26, 24);
+            this.buttonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buttonExit.TabIndex = 1;
+            this.buttonExit.TabStop = false;
+            this.buttonExit.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // MusicPlayerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkViolet;
             this.ClientSize = new System.Drawing.Size(289, 526);
+            this.Controls.Add(this.downButton);
+            this.Controls.Add(this.upButton);
             this.Controls.Add(this.mixTracksButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.PreviousButton);
@@ -280,14 +313,16 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MusicPlayerApp_MouseMove);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerMusic)).EndInit();
             this.contextMenu.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.downButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mixTracksButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NextButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreviousButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,6 +344,8 @@
         private System.Windows.Forms.ContextMenuStrip contextMenu;
         private System.Windows.Forms.ToolStripMenuItem buttonDelete;
         private System.Windows.Forms.PictureBox mixTracksButton;
+        private System.Windows.Forms.PictureBox upButton;
+        private System.Windows.Forms.PictureBox downButton;
     }
 }
 

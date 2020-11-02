@@ -60,7 +60,7 @@ namespace MusicAppv1
                     {
                         case ".mp3":
                         case ".wav":
-                            listBoxSongs.Items.Add(filesNew[i]); // Отобразить имена треков в листбоксе
+                            listBoxSongs.Items.Add(Path.GetFileNameWithoutExtension(filesNew[i])); // Отобразить имена треков в листбоксе
                             break;
                         default:
                             MessageBox.Show($"Файл {filesNew[i]} имеет неверный формат !");
@@ -316,24 +316,43 @@ namespace MusicAppv1
 
         // удаление элементов в листбоксе
         private void buttonDelete_Click(object sender, EventArgs e)
-        {          
-                int tI = listBoxSongs.SelectedIndex;
-                paths.RemoveAt(tI);
-                files.RemoveAt(tI);
-                listBoxSongs.Items.RemoveAt(tI);
+        {
+            int index = listBoxSongs.SelectedIndex;
+            
+            if (listBoxSongs.Items.Count != 1)
+            {
 
-                for (int i = tI; i < paths.Count - tI; i++)
+                listBoxSongs.SelectedIndex = 0;
+                
+
+
+                paths.RemoveAt(index);
+                files.RemoveAt(index);
+                listBoxSongs.Items.RemoveAt(index);
+
+                for (int i = index; i < files.Count - index; i++)
                 {
-                    listBoxSongs.Items[i] = listBoxSongs.Items[i + 1];
                     paths[i] = paths[i + 1];
                     files[i] = files[i + 1];
-                }           
-        }
+                    listBoxSongs.Items[i] = listBoxSongs.Items[i + 1];
 
+                }
+
+            }
+            else
+            {
+                listBoxSongs.Items.Clear();
+                paths.Clear();
+                files.Clear();
+            }
+            
+            
+        }
+        //удаления для клавишы DELETE
         private void listBoxSongs_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
-            if (e.KeyData == Keys.Delete)           
-                buttonDelete_Click(sender, e);           
+            if (e.KeyData == Keys.Delete && listBoxSongs.Items.Count > 0)
+                buttonDelete_Click(sender, e);
         }
     }
 }

@@ -63,6 +63,16 @@ namespace MusicAppv1.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DownButton {
+            get {
+                object obj = ResourceManager.GetObject("DownButton", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_начало_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-начало-96", resourceCulture);
@@ -116,6 +126,16 @@ namespace MusicAppv1.Properties {
         internal static System.Drawing.Bitmap icons8_шеврон_вправо_в_круге_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-шеврон-вправо-в-круге-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Upbutton {
+            get {
+                object obj = ResourceManager.GetObject("Upbutton", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
