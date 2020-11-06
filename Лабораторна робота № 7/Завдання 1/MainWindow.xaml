@@ -1,0 +1,115 @@
+﻿<Window x:Class="Завдання_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Завдання_1"
+        mc:Ignorable="d"
+        Title="Task 1" Height="346" Width="465"
+        Style="{StaticResource WindowStyle}"
+        ResizeMode="CanMinimize"
+        WindowStartupLocation="CenterScreen">
+
+
+    <Grid>
+        <Button x:Name="addArrBtn"
+                Width="133"
+                Margin="49,242,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Click="addArrBtn_Click"
+                Content="Добавить в массив"
+                IsEnabled="False" Height="29" />
+
+
+        <TextBox x:Name="currentValue"
+            Width="165"
+            Height="22"
+            Margin="33,201,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top"
+            IsEnabled="False"
+            TextWrapping="Wrap" AutomationProperties.IsOffscreenBehavior="Onscreen" />
+
+        <TextBlock Text="Введите значение для элемента"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="28,165,0,0"/>
+
+        <TextBlock x:Name="countElements"
+                   Margin="107,180,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   IsEnabled="False"
+                   Style="{DynamicResource TextBlockStyle}"
+                   Text="0/0"
+                   TextWrapping="Wrap"/>
+
+        <TextBlock Text="Введите размер массива"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top"
+                   Margin="42,22,0,0"/>
+
+        <TextBox x:Name="sizeArr"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Width="165"
+                 Height="22"
+                 Margin="33,52,0,0"
+                 TextWrapping="Wrap"/>
+
+        <Button x:Name="createArr"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"
+                Margin="49,89,0,0"
+                Width="133"
+                Height="25"
+                Content="Создать массив"
+                Click="createArr_Click" />
+
+        <ListBox x:Name="elementsArr" 
+                 Margin="233,10,10,154"
+                 Width="222"/>
+
+        <TextBlock x:Name="arrIndicate"
+                 Margin="64,276,0,0"
+                 HorizontalAlignment="Left"
+                 VerticalAlignment="Top"
+                 Style="{DynamicResource TextBlockStyle}"
+                 Text="Массив заполнен"
+                 TextWrapping="Wrap"
+                 Visibility="Hidden" />
+
+        <TextBlock x:Name="minValue"
+                   Margin="232,183,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" Height="22" Width="174"
+                   Text="Минимум = "/>
+
+        <TextBlock x:Name="maxValue"
+                   Margin="232,156,0,0"
+                   HorizontalAlignment="Left"
+                   VerticalAlignment="Top" Height="22" Width="174"
+                   Text="Максимум = "/>
+
+        <TextBlock x:Name="sumValue"
+            Margin="232,212,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Height="22" Width="173"
+            Text="Сумма = "/>
+
+        <TextBlock x:Name="avgValue"
+            Margin="232,242,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Height="22" Width="173"         
+            Text="Среднее = " />
+
+        <TextBlock x:Name="negativeValues"
+            Margin="232,269,0,0"
+            HorizontalAlignment="Left"
+            VerticalAlignment="Top" Height="44" Width="222"
+            Text="Отрицательные: " />
+
+
+    </Grid>
+</Window>
