@@ -27,22 +27,21 @@ namespace Завдання_1
             InitializeComponent();
         }
 
-        private int[] elements;
-        private int count;
-        private int counter2;
+        private int[] _elements;
+        private int _count;
+        private int _counter2;
 
 
         private void addArrBtn_Click(object sender, RoutedEventArgs e)
         {
-            
-            int currentNumber;
-            if (int.TryParse(currentValue.Text, out currentNumber))
+
+            if (int.TryParse(currentValue.Text, out int currentNumber))
             {
-                elements[count] = currentNumber;
-                elementsArr.Items[count] = currentNumber;
-                UpdateProgressText(++count, elements.Length);
-                ShowValues(counter2);
-                counter2++;
+                _elements[_count] = currentNumber;
+                elementsArr.Items[_count] = currentNumber;
+                UpdateProgressText(++_count, _elements.Length);
+                ShowValues(_counter2);
+                _counter2++;
             }
             else if (currentValue.GetType() != typeof(int))
             {
@@ -61,12 +60,11 @@ namespace Завдання_1
         {
             Reset();
 
-            int size;
-            if (int.TryParse(sizeArr.Text, out size))
+            if (int.TryParse(sizeArr.Text, out int size))
             {
                 if (size > 0)
                 {
-                    elements = new int[size];
+                    _elements = new int[size];
                     for (int i = 0; i < size; i++)
                         elementsArr.Items.Add(0);
                 }
@@ -78,7 +76,7 @@ namespace Завдання_1
                 MessageBox.Show(this, "Нужно вводить число!");
             }
 
-            UpdateProgressText(0, elements.Length);
+            UpdateProgressText(0, _elements.Length);
             UpdateEnabledState();
         }
 
@@ -89,14 +87,14 @@ namespace Завдання_1
 
         private void Reset()
         {
-            count = 0;
+            _count = 0;
             elementsArr.Items.Clear();
             UpdateProgressText(0, 0);
         }
         private void UpdateEnabledState()
         {
             
-            bool enabled = elements != null && (count != elements.Length);
+            bool enabled = _elements != null && (_count != _elements.Length);
             addArrBtn.IsEnabled = enabled;
             currentValue.IsEnabled = enabled;
             countElements.IsEnabled = true;
@@ -104,12 +102,12 @@ namespace Завдання_1
         }
         private void ShowValues(int item)
         {
-            minValue.Text = $"Минимум = {elements.Min()}";
-            maxValue.Text = $"Максимум = {elements.Max()}";
-            avgValue.Text = $"Среднее = {Math.Round(elements.Average(), 2)}";
-            sumValue.Text = $"Сумма = {Math.Round((double)elements.Sum(), 2)}";           
-            if (elements[item] < 0)          
-                negativeValues.Text += $"{elements[item]}, ";
+            minValue.Text = $"Минимум = {_elements.Min()}";
+            maxValue.Text = $"Максимум = {_elements.Max()}";
+            avgValue.Text = $"Среднее = {Math.Round(_elements.Average(), 2)}";
+            sumValue.Text = $"Сумма = {Math.Round((double)_elements.Sum(), 2)}";           
+            if (_elements[item] < 0)          
+                negativeValues.Text += $"{_elements[item]}, ";
                     
         }
     }
