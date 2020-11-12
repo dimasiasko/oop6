@@ -151,7 +151,11 @@ namespace MusicAppv1
         private void listBoxSongs_Click(object sender, EventArgs e)
         {
             if (listBoxSongs.SelectedIndex == -1)            
-                listBoxSongs.SelectedIndex = 0;                     
+                listBoxSongs.SelectedIndex = 0;
+            else
+            {
+                return;
+            }
         }
         
        
@@ -317,42 +321,39 @@ namespace MusicAppv1
         // удаление элементов в листбоксе
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            int index = listBoxSongs.SelectedIndex;
-            
-            if (listBoxSongs.Items.Count != 1)
+            try
             {
+                int index = listBoxSongs.SelectedIndex;
 
-                listBoxSongs.SelectedIndex = 0;
-                
-
+                axWindowsMediaPlayerMusic.Ctlcontrols.stop();
 
                 paths.RemoveAt(index);
                 files.RemoveAt(index);
                 listBoxSongs.Items.RemoveAt(index);
-
                 for (int i = index; i < files.Count - index; i++)
                 {
                     paths[i] = paths[i + 1];
                     files[i] = files[i + 1];
                     listBoxSongs.Items[i] = listBoxSongs.Items[i + 1];
-
                 }
-
             }
-            else
+            catch (Exception exception)
             {
-                listBoxSongs.Items.Clear();
-                paths.Clear();
-                files.Clear();
+                if (exception != null)
+                {
+                    return;
+                }
             }
             
-            
+           
         }
+
         //удаления для клавишы DELETE
         private void listBoxSongs_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
         {
             if (e.KeyData == Keys.Delete && listBoxSongs.Items.Count > 0)
                 buttonDelete_Click(sender, e);
         }
+       
     }
 }

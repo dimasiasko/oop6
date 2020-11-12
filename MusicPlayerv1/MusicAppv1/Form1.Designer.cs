@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MusicPlayerApp));
             this.TopPanel = new System.Windows.Forms.Panel();
+            this.buttonExit = new System.Windows.Forms.PictureBox();
             this.IblLogo = new System.Windows.Forms.Label();
             this.listBoxSongs = new System.Windows.Forms.ListBox();
             this.btnSelectSongs = new System.Windows.Forms.Button();
@@ -46,8 +47,8 @@
             this.PreviousButton = new System.Windows.Forms.PictureBox();
             this.PauseButton = new System.Windows.Forms.PictureBox();
             this.PlayButton = new System.Windows.Forms.PictureBox();
-            this.buttonExit = new System.Windows.Forms.PictureBox();
             this.TopPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerMusic)).BeginInit();
             this.contextMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.downButton)).BeginInit();
@@ -57,7 +58,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PreviousButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).BeginInit();
             this.SuspendLayout();
             // 
             // TopPanel
@@ -74,6 +74,20 @@
             this.TopPanel.TabIndex = 0;
             this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             this.TopPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseMove);
+            // 
+            // buttonExit
+            // 
+            this.buttonExit.BackColor = System.Drawing.Color.DarkViolet;
+            this.buttonExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
+            this.buttonExit.Location = new System.Drawing.Point(260, 3);
+            this.buttonExit.Name = "buttonExit";
+            this.buttonExit.Size = new System.Drawing.Size(26, 24);
+            this.buttonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.buttonExit.TabIndex = 1;
+            this.buttonExit.TabStop = false;
+            this.buttonExit.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // IblLogo
             // 
@@ -135,7 +149,7 @@
             this.labelChoosing.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.labelChoosing.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelChoosing.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelChoosing.Location = new System.Drawing.Point(32, 188);
+            this.labelChoosing.Location = new System.Drawing.Point(16, 188);
             this.labelChoosing.Name = "labelChoosing";
             this.labelChoosing.Size = new System.Drawing.Size(255, 260);
             this.labelChoosing.TabIndex = 5;
@@ -175,6 +189,7 @@
             this.downButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.downButton.TabIndex = 12;
             this.downButton.TabStop = false;
+            
             // 
             // upButton
             // 
@@ -189,6 +204,7 @@
             this.upButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.upButton.TabIndex = 11;
             this.upButton.TabStop = false;
+            
             // 
             // mixTracksButton
             // 
@@ -273,20 +289,6 @@
             this.PlayButton.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PlayButton_MouseDown);
             this.PlayButton.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PlayButton_MouseUp);
             // 
-            // buttonExit
-            // 
-            this.buttonExit.BackColor = System.Drawing.Color.DarkViolet;
-            this.buttonExit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.buttonExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonExit.Image = ((System.Drawing.Image)(resources.GetObject("buttonExit.Image")));
-            this.buttonExit.Location = new System.Drawing.Point(260, 3);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(26, 24);
-            this.buttonExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.buttonExit.TabIndex = 1;
-            this.buttonExit.TabStop = false;
-            this.buttonExit.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // MusicPlayerApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,6 +315,7 @@
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.MusicPlayerApp_MouseMove);
             this.TopPanel.ResumeLayout(false);
             this.TopPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayerMusic)).EndInit();
             this.contextMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.downButton)).EndInit();
@@ -322,7 +325,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.PreviousButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PauseButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PlayButton)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.buttonExit)).EndInit();
             this.ResumeLayout(false);
 
         }

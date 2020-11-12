@@ -2,85 +2,54 @@
 
 namespace Завдання_2
 {
-    class MyMatrix
-    {
-        public int[,] matrix = null;
-        public int columns;
-        public int rows;
-
-        public int Columns
-        {
-            get { return columns; }
-        }
-
-        public int Rows
-        {
-            get { return rows; }
-        }
-
-        public MyMatrix()
-        {
-
-        }
-
-        public MyMatrix(int columns, int rows)
-        {
-            if (columns < 0 || rows < 0)
-            {
-                Console.WriteLine("Размер матрицы не может быть отрицательным!");
-            }
-            else
-            {
-                this.columns = columns;
-                this.rows = rows;
-                matrix = new int[columns, rows];
-            }
-        }
-
-        public void FillInMatrix()
-        {
-            Random random = new Random();
-
-            for (int i = 0; i < columns; i++)
-            {
-                for (int j = 0; j < rows; j++)
-                {
-                    matrix[columns, rows] = random.Next(-100, 100);
-                }
-            }
-        }
-
-        public void ShowMatrix()
-        {
-            for (int i = 0; i < columns; i++)
-            {
-                for (int j = 0; j < rows; j++)
-                {
-                    Console.WriteLine(matrix[i,j] + "\t");
-                }
-                Console.WriteLine();
-            }
-        }
-
-        public void ChangeMatrix(int m, int n)
-        {
-            if (m < 0 || n < 0) 
-            {
-                Console.WriteLine("Размер матрицы не может быть отрицательным!");
-            }
-            else
-            {
-                this.columns = m;
-                this.rows = n;
-                matrix = new int[columns, rows];
-            }
-        }
-    }
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введите количетво столбцов:");
+            while (true)
+            {
+                Console.WriteLine("Введите количество столбцов: ");
+                bool parseColumns = int.TryParse(Console.ReadLine(), out int columns);
+
+                Console.WriteLine("Введите количество рядов: ");
+                bool parseRows = int.TryParse(Console.ReadLine(), out int rows);
+                if (!(parseColumns && parseRows))
+                    continue;
+                
+                MyMatrix myMatrix = new MyMatrix(columns, rows);
+
+                myMatrix.FillInMatrix();
+                myMatrix.ShowMatrix();
+
+                Console.WriteLine("\n" + new string('/', 25));
+
+                Console.WriteLine($"Размер матрицы: {myMatrix.Columns}х{myMatrix.Rows}");
+
+                Console.WriteLine("\n" + new string('/', 25));
+
+
+                Console.WriteLine("Введите новое количество столбцов: ");
+                bool parseColumns2 = int.TryParse(Console.ReadLine(), out int columnsNew);
+
+                Console.WriteLine("Введите новое количество рядов: ");
+                bool parseRows2 = int.TryParse(Console.ReadLine(), out int rowsNew);
+
+                if (!(parseColumns2 && parseRows2))
+                    continue;
+                myMatrix.ChangeMatrix(columnsNew, rowsNew);
+                myMatrix.FillInMatrix();
+                myMatrix.ShowMatrix();
+
+                Console.WriteLine("\n" + new string('/', 25));
+
+                Console.WriteLine($"Размер новой матрицы: {myMatrix.Columns}х{myMatrix.Rows}");
+
+                Console.WriteLine("\n" + new string('/', 25));
+
+                Console.WriteLine("Сейчас попробуем обратиться к индексу, которого не существует и существует");
+                myMatrix[myMatrix.Columns + 5, myMatrix.Rows + 5] = 228;
+            }
             
         }
     }
