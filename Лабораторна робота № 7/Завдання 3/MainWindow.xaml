@@ -20,7 +20,7 @@
             <ColumnDefinition Width="460"/>
         </Grid.ColumnDefinitions>
 
-        <ListBox Grid.Column="0" Name="ListBoxWatch" ItemsSource="{Binding Articles}" SelectedItem="{Binding SelectedArticle}">
+        <ListBox Grid.Column="0" Name="ListBoxWatch"   ItemsSource="{Binding Articles}" SelectedItem="{Binding SelectedArticle}" >
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Margin="5">
@@ -37,16 +37,16 @@
         <StackPanel Grid.Column="1" DataContext="{Binding SelectedArticle}">
             <TextBlock Text="Выбраные часы"  TextAlignment="Center"  Margin="25,25,25,25" Height="24" Width="150"/>
             <TextBlock Name="TextBlock1" Text="Названия модели" Width="350"/>
-            <TextBox Name="TextBox1" Text="{Binding NameArticle}" Height="26" Width="350" />
+            <TextBox Name="TextBox1" Text="{Binding NameArticle}" Height="26" Width="350" BorderBrush="#FF8B9BCB" Background="#FFC8D8C7" />
             <TextBlock Name="TextBlock2" Text="Названия магазина" Width="355"/>
-            <TextBox Name="TextBox2" Text="{Binding NameStore}" Width="350"/>
+            <TextBox Name="TextBox2" Text="{Binding NameStore}" Width="350" Background="#FFA2BF9F"/>
             <TextBlock Name="TextBlock3" Text="Цена в $" Width="350"/>
-            <TextBox Name="TextBox3" Text="{Binding Price}" Width="350"/>
+            <TextBox Name="TextBox3" Text="{Binding Price}" Width="350" Background="#FF89E280"/>
             <CheckBox Name="CheckBox" Content="Добавить запись" Width="150" Margin="60,10,0,0" Click="CheckBox_OnClick"></CheckBox>
             <Button Content="Добавить" Width="100" Margin="0,10" Click="ButtonBase_OnClick" ></Button>
             <TextBlock Text="Введите индекс для поиска" TextWrapping="Wrap" TextAlignment="Center" Width="150" Margin="250,0,0,0"/>
             <TextBox Name="indexORword" Width="100" Margin="250,10,0,0"/>
-            <Button Name="searchBtn" Click="SearchBtn_OnClick" Content="Поиск" Width="100" Margin="250,10,0,0"/>
+            <Button Name="searchBtn" Click="SearchBtn_OnClick" Content="Поиск" Width="100" Margin="250,10,0,0" Background="#FFF04B4B" Cursor="Hand"/>
            
         </StackPanel>
     </Grid>

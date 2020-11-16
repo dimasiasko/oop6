@@ -34,7 +34,10 @@ namespace Завдання_3
             bool index = int.TryParse(indexORword.Text, out int currentNumber);
             if (index && currentNumber < store.Articles.Count)
             {
-                ListBoxWatch.SelectedIndex= currentNumber;
+                ListBoxWatch.SelectedItem = ListBoxWatch.Items.GetItemAt(currentNumber);
+                
+
+
             }
             else
             {
