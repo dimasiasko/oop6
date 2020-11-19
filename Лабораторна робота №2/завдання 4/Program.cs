@@ -1,105 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace завдання_4
 {
-    class Point
-    {
-        string name;
-        int x, y;
-        public int X
-        {
-            get
-            {
-                return x;
-            }
-        }
-        public int Y
-        {
-            get
-            {
-                return y;
-            }
-        }
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-        }
-        public Point()
-            : this("", 0, 0) { }
-        public Point(string name, int x, int y)
-        {
-            //Console.WriteLine("Enter a letter of Point:");
-            //this.name = Console.ReadLine();
-            Console.WriteLine("Введите коорд. точки A: ");
-            this.x = int.Parse(Console.ReadLine());
-            Console.WriteLine("Введите коорд. точки B: ");
-            this.y = int.Parse(Console.ReadLine());
-        }
-    }
-    class Figure
-    {
-        int number;
-        Point[] points;
-        string name;
-        public string Name
-        {
-            get
-            {
-                return name;
-            }
-            set
-            {
-                name = value;
-            }
-        }
-        public void InitializeFigure()
-        {
-            Console.WriteLine("Введите количество вершин вашей фигуры: ");
-            number = int.Parse(Console.ReadLine());          
-            Console.WriteLine($"Ваша фигура - {number}-угольник");
-            
-            points = new Point[number];
-            for (int i = 0; i < points.Length; i++)
-            {
-                points[i] = new Point();
-            }
-
-        }
-        public double LengthSide(Point a, Point b)
-        {
-            return Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
-        }
-        public double PerimeterCalculator()
-        {
-            double perimeter = 0;
-            for (int i = 1; i < points.Length; i++)
-            {
-                perimeter += this.LengthSide(points[i - 1], points[i]);
-            }
-            perimeter += this.LengthSide(points[0], points[points.Length - 1]);
-            return perimeter;
-        }
-        public Figure()
-        {
-            InitializeFigure();
-        }
-    }
-
-
     class Program
     {
         static void Main(string[] args)
         {
-            Figure cube = new Figure();
-            Console.WriteLine("Периметр = " + cube.PerimeterCalculator());
-            
+            Console.WriteLine("Введите имя фигуры: ");
+            string name = Console.ReadLine();
+
+            while (true)
+            {
+                try
+                {
+                    Console.WriteLine("Введите количество вершин фигуры: ");
+                    int number = int.Parse(Console.ReadLine());
+                    if (number <= 0)
+                    {
+                        Console.WriteLine("Это уже не фигура :)");
+                        continue;
+                    }
+                    else if (number == 1)
+                    {
+                        Console.WriteLine("Это точка :)");
+                        continue;
+                    }
+                    else if (number == 2)
+                    {
+                        Console.WriteLine("А это отрезок)");
+                        continue;
+                    }
+
+                    Console.WriteLine("Введите координату первой точки: ");
+                    int pointA = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Введите координату второй точки: ");
+                    int pointB = int.Parse(Console.ReadLine());
+
+                    Figure figure = new Figure(pointA, pointB, number, name);
+
+                    figure.PerimeterCalculator();
+                }
+                catch (Exception)
+                {
+                    continue;
+                }
+            }
         }
     }
 }
