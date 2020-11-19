@@ -1,71 +1,67 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Завдання_2
+
+namespace завдання_2
 {
-    
-    class B
+    class Rectangle
     {
-        public int simpleInt = 16;
-        public decimal money = 40;
+        public double side1 = 0.0d;
+        public double side2 = 0.0d;
+        public Rectangle(double s1, double s2)
+        {
+            this.side1 = s1;
+            this.side2 = s2;
+        }
+        
+        public double AreaCalculator()
+        {
+            double area = side1 * side2;
+            return area;
+        }
+        public double PerimeterCalculator()
+        {
+            double perimetr = (side1 + side2) * 2;
+            return perimetr;
+        }
+        public double Area { get; }
+        public double Perimeter { get; }
+    }
 
-        public virtual void MethodOne()
-        {            
-            Console.WriteLine(simpleInt);
-        }
-
-        public virtual bool MethodTwo()
-        {
-            if (simpleInt == 16)
-                return true;          
-            else
-                return false;            
-        }
-    }
-    class A : B
-    {
-        public A(int sN, decimal mN, bool tF = true)
-        {
-            if (!tF)            
-                money = sN;
-            else
-            {
-                simpleInt = sN;
-                money = mN;
-            }
-            
-            
-        }
-    }
-    class B2:B
-    {
-        public override void MethodOne()
-        {
-            simpleInt = 15;
-            base.MethodOne();
-            
-        }
-    }
-    class B3 : B
-    {
-        public override bool MethodTwo()
-        {
-            simpleInt = 14;
-            return base.MethodTwo();    
-        }
-
-    }
     class Program
     {
         static void Main(string[] args)
         {
-            B2 b2 = new B2();
-            b2.MethodOne();
+            double number;
+            double number2;
 
-            B3 b3 = new B3();
-            b3.MethodTwo();
+            Step1:
+            Console.WriteLine("Введите ширину: ");
+            bool width = double.TryParse(Console.ReadLine(), out number);
 
-            A a = new A(14, 521);
-            Console.WriteLine(a.money);
+            if (!width)
+            {
+                Console.WriteLine("Введите число!");
+                goto Step1;
+            }
+
+            Step2:
+            Console.WriteLine("Введите длину: ");
+            bool lenght = double.TryParse(Console.ReadLine(), out number2);
+
+            if (!lenght)
+            {
+                Console.WriteLine("Введите число!");
+                goto Step2;
+            }
+
+            Rectangle rectangle = new Rectangle(number, number2);
+
+            Console.WriteLine($"Площадь прямоугольника: {rectangle.AreaCalculator()}");
+            Console.WriteLine($"Периметр прямоугольника: {rectangle.PerimeterCalculator()}");
         }
     }
 }

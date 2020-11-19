@@ -1,0 +1,14 @@
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 7\bin\Debug\завдання 7.exe.config
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 7\bin\Debug\завдання 7.exe
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 7\bin\Debug\завдання 7.pdb
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 7\obj\Debug\завдання 7.csprojAssemblyReference.cache
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 7\obj\Debug\завдання 7.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 7\obj\Debug\завдання 7.exe
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 7\obj\Debug\завдання 7.pdb
+D:\oop6\Лабораторна робота №2\завдання 7\bin\Debug\завдання 7.exe.config
+D:\oop6\Лабораторна робота №2\завдання 7\bin\Debug\завдання 7.exe
+D:\oop6\Лабораторна робота №2\завдання 7\bin\Debug\завдання 7.pdb
+D:\oop6\Лабораторна робота №2\завдання 7\obj\Debug\завдання 7.csprojAssemblyReference.cache
+D:\oop6\Лабораторна робота №2\завдання 7\obj\Debug\завдання 7.csproj.CoreCompileInputs.cache
+D:\oop6\Лабораторна робота №2\завдання 7\obj\Debug\завдання 7.exe
+D:\oop6\Лабораторна робота №2\завдання 7\obj\Debug\завдання 7.pdb

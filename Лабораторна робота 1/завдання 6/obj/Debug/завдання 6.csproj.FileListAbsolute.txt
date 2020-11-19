@@ -1,7 +1,0 @@
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 6\bin\Debug\завдання 6.exe.config
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 6\bin\Debug\завдання 6.exe
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 6\bin\Debug\завдання 6.pdb
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 6\obj\Debug\завдання 6.csprojAssemblyReference.cache
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 6\obj\Debug\завдання 6.csproj.CoreCompileInputs.cache
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 6\obj\Debug\завдання 6.exe
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 6\obj\Debug\завдання 6.pdb

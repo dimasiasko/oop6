@@ -1,56 +1,88 @@
 ﻿using System;
-using System.Runtime.InteropServices;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Завдання_3
+namespace завдання_3
 {
-    class BaseClass
+    class Title
     {
-        public int money = 2000;
-        public string currencyName = "Ukrainian Dollar";
-        public double exchangeValue = 28.41;
+        public string TitleBook { get; set; }
+        public void Show()
+        {
+            Console.WriteLine($"Заголовок книжки: {TitleBook}");
+        }
+    }
+    class Author
+    {
+        public string AuthorName { get; set; }
+        public void Show()
+        {
+            Console.WriteLine($"Псевдоним автора: {AuthorName}");
+        }
+    }
+    
+    class Content
+    {
+        public string ContentBook { get; set; }
+        public void Show()
+        {
+            Console.WriteLine($"О чем книга: {ContentBook}");
+        }
+    }
+    class Book
+    {
+        public Title ThisTitle { get; set; }
+        public Author ThisAuthor { get; set; }
+        
+        public Content ThisContent { get; set; }
+        public void Show()
+        {
+            
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            ThisTitle.Show();
 
-        public virtual void Show()
-        {
-            Console.WriteLine(money);
-            Console.WriteLine(currencyName);
-            Console.WriteLine(exchangeValue);
+            Console.ForegroundColor = ConsoleColor.Blue;
+            ThisAuthor.Show();
+
+            Console.ForegroundColor = ConsoleColor.Red;
+            ThisContent.Show();
         }
-    }
-    class Money:BaseClass
-    {
-        public override void Show()
+        
+        public Book(string AuthorName, string TitleBook, string ContentBook)
         {
-            Console.WriteLine(money);
+            ThisAuthor = new Author();
+            ThisTitle = new Title();
+            ThisContent = new Content();
+
+            ThisAuthor.AuthorName = AuthorName;
+            ThisContent.ContentBook = ContentBook;
+            ThisTitle.TitleBook = TitleBook;
         }
-    }
-    class Currency:BaseClass
-    {
-        public override void Show()
+
+        public Book()
         {
-            Console.WriteLine(currencyName);
-        }
-    }
-    class Value : BaseClass
-    {
-        public override void Show()
-        {
-            Console.WriteLine(exchangeValue);
+            ThisAuthor = new Author();
+            ThisTitle = new Title();
+            ThisContent = new Content();
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            var array = new BaseClass[3];          
-            array[0] = new Money();
-            array[1] = new Currency();
-            array[2] = new Value();
+            Console.WriteLine("Введите псевдоним: ");
+            string author = Console.ReadLine();
 
-            foreach (BaseClass obj in array)
-            {
-                obj.Show();
-            }
+            Console.WriteLine("Введите название книги: ");
+            string title = Console.ReadLine();
 
+            Console.WriteLine("О чем эта книга?: ");
+            string content = Console.ReadLine();
+
+            Book book = new Book(author, title, content);
+            book.Show();           
         }
     }
 }

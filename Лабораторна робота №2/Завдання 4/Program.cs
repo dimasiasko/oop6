@@ -1,75 +1,105 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Завдання_4
+namespace завдання_4
 {
-    class ApplicationLicense
+    class Point
     {
-        public void AllowTrial()
+        string name;
+        int x, y;
+        public int X
         {
-            Console.WriteLine("Вам доступен ТРИАЛЬНЫЙ режим на 30 дней");
+            get
+            {
+                return x;
+            }
         }
-        public void AllowCommon()
+        public int Y
         {
-            Console.WriteLine("Вам доступна БЕСПЛАТНАЯ версия"); 
+            get
+            {
+                return y;
+            }
         }
-        public void AllowPro()
+        public string Name
         {
-            Console.WriteLine("Вам доступна ПОЛНАЯ ПЛАТНАЯ версия");
+            get
+            {
+                return name;
+            }
+        }
+        public Point()
+            : this("", 0, 0) { }
+        public Point(string name, int x, int y)
+        {
+            //Console.WriteLine("Enter a letter of Point:");
+            //this.name = Console.ReadLine();
+            Console.WriteLine("Введите коорд. точки A: ");
+            this.x = int.Parse(Console.ReadLine());
+            Console.WriteLine("Введите коорд. точки B: ");
+            this.y = int.Parse(Console.ReadLine());
         }
     }
+    class Figure
+    {
+        int number;
+        Point[] points;
+        string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+            }
+        }
+        public void InitializeFigure()
+        {
+            Console.WriteLine("Введите количество вершин вашей фигуры: ");
+            number = int.Parse(Console.ReadLine());          
+            Console.WriteLine($"Ваша фигура - {number}-угольник");
+            
+            points = new Point[number];
+            for (int i = 0; i < points.Length; i++)
+            {
+                points[i] = new Point();
+            }
+
+        }
+        public double LengthSide(Point a, Point b)
+        {
+            return Math.Sqrt(Math.Pow(a.X - b.X, 2) + Math.Pow(a.Y - b.Y, 2));
+        }
+        public double PerimeterCalculator()
+        {
+            double perimeter = 0;
+            for (int i = 1; i < points.Length; i++)
+            {
+                perimeter += this.LengthSide(points[i - 1], points[i]);
+            }
+            perimeter += this.LengthSide(points[0], points[points.Length - 1]);
+            return perimeter;
+        }
+        public Figure()
+        {
+            InitializeFigure();
+        }
+    }
+
+
     class Program
     {
         static void Main(string[] args)
         {
-            int i = 5;
-            while (i >= 0)
-            {
-                ApplicationLicense applicationLicense = new ApplicationLicense();
-
-                string key;
-                string code;
-                
-                    //коды доступа
-                    //ПРО: 76BTVRO3HPD6
-                    //ТРИАЛ: 6tr8nfyrlr30
-                    //ФРИ: yf896eio0r21
-                    Console.WriteLine("Введите ваш код доступа(12 символов): ");
-
-                    key = Console.ReadLine();
-                    code = key.ToUpper();
-
-                if (code.Contains("P") && code.StartsWith("76") && code.Contains("R") && code.Contains("O"))
-                {
-                    applicationLicense.AllowPro();
-                    break;
-                }                     
-                else if (code.Contains("T") && code.EndsWith("30") && code.Contains("L") && code.Contains("R"))
-                {
-                    applicationLicense.AllowTrial();
-                    break;                   
-                }                        
-                else if (code.Contains("F") && code.EndsWith("21") && code.Contains("E") && code.Contains("R"))
-                {
-                    applicationLicense.AllowCommon();
-                    break;
-                }                       
-                else
-                {
-                    Console.WriteLine("Неверный ключ");
-                    if (i == 0)
-                    {
-                        Console.WriteLine("Блокировка АККАУНТА!");
-                        break;
-                    }
-                    Console.WriteLine($"У вас еще {i} попыток, иначе АККАУНТ БЛОКИРУЕТСЯ");
-                    i--;
-                    continue;
-                }               
-            }
+            Figure cube = new Figure();
+            Console.WriteLine("Периметр = " + cube.PerimeterCalculator());
             
-            Console.ReadKey();
-
-
         }
     }
 }

@@ -1,7 +1,0 @@
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\Завдання 2\bin\Debug\Завдання 2.exe.config
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\Завдання 2\bin\Debug\Завдання 2.exe
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\Завдання 2\bin\Debug\Завдання 2.pdb
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\Завдання 2\obj\Debug\Завдання 2.csprojAssemblyReference.cache
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\Завдання 2\obj\Debug\Завдання 2.csproj.CoreCompileInputs.cache
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\Завдання 2\obj\Debug\Завдання 2.exe
-C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\Завдання 2\obj\Debug\Завдання 2.pdb

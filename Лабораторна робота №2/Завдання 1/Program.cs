@@ -1,53 +1,110 @@
 ﻿using System;
-using System.Diagnostics;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Завдання_1
+namespace завдання_1
 {
-    internal class Output
+    class Adress
     {
-        public virtual void Outputer(string line)
+        public int index;
+        public int Index
         {
-            Debug.WriteLine(($"{line} и его тип = {line.GetType()}"));
-            
+            get { return index; }
+            set
+            {
+                index = value;
+            }
         }
-    }
-    internal class OutputGreen : Output
-    {
-        public override void Outputer(string line)
-        {
-            Console.BackgroundColor = ConsoleColor.Green;
-            base.Outputer($"{line} 2");
-        }
-    }
-    internal class OutputRed : Output
-    {
-        public override void Outputer(string line)
-        {
 
-            Console.BackgroundColor = ConsoleColor.Red;
-            base.Outputer($"{line} 3");
+        public string country
+        public string Country
+        {
+            get { return country; }
+            set
+            {
+                country = value;
+            }
+        }
+
+        public string city;
+        public string City
+        {
+            get { return city; }
+            set
+            {
+                city = value
+            }
+        }
+
+        public string street;
+        public string Street
+        {
+            get { return street; }
+            set
+            {
+                street = value;
+            }
+        }
+
+        public int house;
+        public string House
+        {
+            get { return house; }
+            set
+            {
+                house = value;
+            }
+        }
+
+        public int apartment;
+        public int Apartment
+        {
+            get { return apartment; }
+            set
+            {
+                apartment = value;
+            }
         }
     }
 
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
-            string lineMain = "Наш вывод";
-            
-            var arr = new Output[3];
-            arr[0] = new Output();
-            arr[1] = new OutputGreen();
-            arr[2] = new OutputRed();
-
-            foreach (Output obj in arr)
+            Adress adress = new Adress();
+            while (true)
             {
-                obj.Outputer(lineMain);
-            }
+                try
+                {
+                    Console.WriteLine("Введите индекс: ");
+                    adress.index = int.Parse(Console.ReadLine());
 
-            string newline = ("Использование привидения типов");
-            ((OutputRed)arr[2]).Outputer(newline);
-            Console.ReadKey();
+                    Console.WriteLine("Введите страну: ");
+                    adress.country = Console.ReadLine();
+
+                    Console.WriteLine("Введите город: ");
+                    adress.city = Console.ReadLine();
+                    Console.WriteLine("Введите улицу: ");
+                    adress.street = Console.ReadLine();
+
+                    Console.WriteLine("Введите номер дома: ");
+                    adress.house = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine("Введите номер дома: ");
+                    adress.apartment = int.Parse(Console.ReadLine());
+                    return;
+                }
+                catch (Exception e)
+                {
+                    continue;
+                }
+               
+            }
+            
+
+            Console.WriteLine($"Страна: {adress.country}, город: {adress.city}, индекс: {adress.index}, номер дома: {adress.house}, номер комнаты: {adress.apartment}");
         }
     }
 }
