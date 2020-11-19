@@ -8,17 +8,18 @@ namespace завдання_5
 {
     class User
     {
-        public string login;
-        public string name;
-        public string surname;
-        public int age;
+        public string Login { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public int Age { get; set; }
         DateTime BDate { get; set; }
+
         public User(string login, string name, string surname, int age, DateTime BDate)
         {
-            this.login = login;
-            this.name = name;
-            this.surname = surname;
-            this.age = age;
+            this.Login = login;
+            this.Name = name;
+            this.Surname = surname;
+            this.Age = age;
             this.BDate = DateTime.Now;
         }
     }

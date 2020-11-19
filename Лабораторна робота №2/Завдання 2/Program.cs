@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Завдання_2;
 
 
 namespace завдання_2
@@ -14,31 +15,34 @@ namespace завдання_2
         {
             double number;
             double number2;
-
-            Step1:
-            Console.WriteLine("Введите ширину: ");
-            bool width = double.TryParse(Console.ReadLine(), out number);
-
-            if (!width)
+            while (true)
             {
-                Console.WriteLine("Введите число!");
-                goto Step1;
+                try
+                {
+                    Console.WriteLine("Введите ширину: ");
+                    bool width = double.TryParse(Console.ReadLine(), out number);
+
+                    if (!width)
+                        Console.WriteLine("Введите число!");
+
+                    Console.WriteLine("Введите длину: ");
+                    bool lenght = double.TryParse(Console.ReadLine(), out number2);
+
+                    if (!lenght)
+                        Console.WriteLine("Введите число!");
+
+                    Rectangle rectangle = new Rectangle(number, number2);
+
+                    Console.WriteLine($"Площадь прямоугольника: {rectangle.Area}");
+                    Console.WriteLine($"Периметр прямоугольника: {rectangle.Perimeter}");
+                    Console.ReadLine();
+                }
+                catch (Exception)
+                {
+                    continue;
+                } 
             }
-
-            Step2:
-            Console.WriteLine("Введите длину: ");
-            bool lenght = double.TryParse(Console.ReadLine(), out number2);
-
-            if (!lenght)
-            {
-                Console.WriteLine("Введите число!");
-                goto Step2;
-            }
-
-            Rectangle rectangle = new Rectangle(number, number2);
-
-            Console.WriteLine($"Площадь прямоугольника: {rectangle.AreaCalculator()}");
-            Console.WriteLine($"Периметр прямоугольника: {rectangle.PerimeterCalculator()}");
+            
         }
     }
 }

@@ -18,7 +18,7 @@ namespace завдання_7
             string surname = Console.ReadLine();
 
             Employee employee = new Employee(name,surname);
-            employee.Salary();
+            employee.SalaryCount();
         }
     }
 }

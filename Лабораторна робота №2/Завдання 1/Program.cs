@@ -18,23 +18,23 @@ namespace Завдання_1
                 try
                 {
                     Console.WriteLine("Введите индекс: ");
-                    adress.index = int.Parse(Console.ReadLine());
+                    adress.Index = int.Parse(Console.ReadLine());
 
                     Console.WriteLine("Введите страну: ");
-                    adress.country = Console.ReadLine();
+                    adress.Country = Console.ReadLine();
 
                     Console.WriteLine("Введите город: ");
-                    adress.city = Console.ReadLine();
+                    adress.City = Console.ReadLine();
                     Console.WriteLine("Введите улицу: ");
-                    adress.street = Console.ReadLine();
+                    adress.Street = Console.ReadLine();
 
                     Console.WriteLine("Введите номер дома: ");
-                    adress.house = int.Parse(Console.ReadLine());
-
+                    adress.House = int.Parse(Console.ReadLine());
                     Console.WriteLine("Введите номер квартиры: ");
-                    adress.apartment = int.Parse(Console.ReadLine());
 
-                    Console.WriteLine($"Страна: {adress.country}, город: {adress.city}, индекс: {adress.index}, номер дома: {adress.house}, номер комнаты: {adress.apartment}");
+                    adress.Apartment = int.Parse(Console.ReadLine());
+
+                    Console.WriteLine($"Страна: {adress.Country}, город: {adress.City}, индекс: {adress.Index}, номер дома: {adress.House}, номер комнаты: {adress.Apartment}");
                     Console.WriteLine();
                     Console.WriteLine("Попробуйте еще\n");
                 }

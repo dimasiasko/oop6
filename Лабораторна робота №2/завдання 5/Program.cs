@@ -31,7 +31,7 @@ namespace завдання_5
                     int age = int.Parse(Console.ReadLine());
 
                     User user = new User(login, name, surname, age, BDate);
-                    Console.WriteLine($"Ваг логин: {user.login}, имя: {user.name}, фамилия: {user.surname}, возраст: {user.age}, дата заполнения анкеты: {BDate}");
+                    Console.WriteLine($"Ваг логин: {user.Login}, имя: {user.Name}, фамилия: {user.Surname}, возраст: {user.Age}, дата заполнения анкеты: {BDate}");
                 }
                 catch (Exception)
                 {

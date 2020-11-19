@@ -8,18 +8,17 @@ namespace завдання_7
 {
     class Employee
     {
-
-        public double salary;
-        public double tax;
-        public int position;
-        public string name;
-        public string surname;
+        public double Salary { get; set; }
+        public double Tax { get; set; }
+        public int Position { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
         public Employee(string name, string surname)
         {
-            this.name = name;
-            this.surname = surname;
+            this.Name = name;
+            this.Surname = surname;
         }
-        public void Salary()
+        public void SalaryCount()
         {
             Console.WriteLine("Выберите вашу должность: ");
             Console.WriteLine("1. Кассир");
@@ -27,75 +26,31 @@ namespace завдання_7
             Console.WriteLine("3. Уборщик");
             Console.WriteLine("4. Администратор");
 
-            position = int.Parse(Console.ReadLine());
+            Position = int.Parse(Console.ReadLine());
 
-        Step1:
-            if (position == 1)
-            {
-                salary = 5000;
+            Console.WriteLine("Введите ваш стаж в месяцах: ");
+            int exp = int.Parse(Console.ReadLine());
 
-                Console.WriteLine("Введите ваш стаж в месяцах: ");
-                int exp = int.Parse(Console.ReadLine());
-
-                double newsalary = salary + (exp * 10);
-                tax = newsalary * 0.18;
-
-                Console.WriteLine($"Имя: {name}, Фамилия: {surname}, Должность: {position}, Стаж: {exp}");
-                Console.WriteLine($"Ваша зарплата без налога: {newsalary}");
-                Console.WriteLine($"Налог(18%): {tax}");
-                Console.WriteLine($"Конечная сумма: {newsalary - tax}");
-
-            }
-            else if (position == 2)
-            {
-                salary = 7200;
-
-                Console.WriteLine("Введите ваш стаж в месяцах: ");
-                int exp = int.Parse(Console.ReadLine());
-
-                double newsalary = salary + (exp * 10);
-                tax = newsalary * 0.18;
-
-                Console.WriteLine($"Имя: {name}, Фамилия: {surname}, Должность: {position}, Стаж: {exp}");
-                Console.WriteLine($"Ваша зарплата без налога: {newsalary}");
-                Console.WriteLine($"Налог(18%): {tax}");
-                Console.WriteLine($"Конечная сумма: {newsalary - tax}");
-            }
-            else if (position == 3)
-            {
-                salary = 3500;
-
-                Console.WriteLine("Введите ваш стаж в месяцах: ");
-                int exp = int.Parse(Console.ReadLine());
-
-                double newsalary = salary + (exp * 10);
-                tax = newsalary * 0.18;
-
-                Console.WriteLine($"Имя: {name}, Фамилия: {surname}, Должность: {position}, Стаж: {exp}");
-                Console.WriteLine($"Ваша зарплата без налога: {newsalary}");
-                Console.WriteLine($"Налог(18%): {tax}");
-                Console.WriteLine($"Конечная сумма: {newsalary - tax}");
-            }
-            else if (position == 4)
-            {
-                salary = 8900;
-
-                Console.WriteLine("Введите ваш стаж в месяцах: ");
-                int exp = int.Parse(Console.ReadLine());
-
-                double newsalary = salary + (exp * 10);
-                tax = newsalary * 0.18;
-
-                Console.WriteLine($"Имя: {name}, Фамилия: {surname}, Должность: {position}, Стаж: {exp}");
-                Console.WriteLine($"Ваша зарплата без налога: {newsalary}");
-                Console.WriteLine($"Налог(18%): {tax}");
-                Console.WriteLine($"Конечная сумма: {newsalary - tax}");
-            }
+            double newsalary = 0;
+            
+            if (Position == 1)
+                Salary = 5000;
+            else if (Position == 2)
+                Salary = 7200;
+            else if (Position == 3)
+                Salary = 3500;
+            else if (Position == 4)
+                Salary = 8900;
             else
-            {
                 Console.WriteLine("Выберите должность из списка!");
-                goto Step1;
-            }
+
+            newsalary = Salary + (exp * 10);
+            Tax = newsalary * 0.18;
+
+            Console.WriteLine($"Имя: {Name}, Фамилия: {Surname}, Должность: {Position}, Стаж: {exp}");
+            Console.WriteLine($"Ваша зарплата без налога: {newsalary}");
+            Console.WriteLine($"Налог(18%): {Tax}");
+            Console.WriteLine($"Конечная сумма: {newsalary - Tax}");
         }
     }
 }

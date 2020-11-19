@@ -11,26 +11,26 @@ namespace Завдання_8
         public int Price { get; private set; }
         public string Customer { get; private set; }
         public string Provider { get; private set; }
-        private string article;
-        private int quantity;
+        private string Article { get; set; }
+        private int Quantity { get; set; }
 
         public Invoice(int acc, string cust, string prov, string artic, int quant)
         {
             this.Price = acc;
             this.Customer = cust;
             this.Provider = prov;
-            this.article = artic;
-            this.quantity = quant;
+            this.Article = artic;
+            this.Quantity = quant;
         }
         public double NDSprice()
         {
-            double lastprice = Price * quantity;
+            double lastprice = Price * Quantity;
             double NDSprice = lastprice - (lastprice * 0.175);
             return NDSprice;
         }
         public double WithoutNDSprice()
         {
-            double lastprice = Price * quantity;
+            double lastprice = Price * Quantity;
 
             return lastprice;
         }

@@ -26,7 +26,15 @@ namespace Завдання_2
             double perimetr = (side1 + side2) * 2;
             return perimetr;
         }
-        public double Area { get; }
-        public double Perimeter { get; }
+
+        public double Area
+        {
+            get { return AreaCalculator(); }
+        }
+
+        public double Perimeter
+        {
+            get { return PerimeterCalculator(); }
+        }
     }
 }
