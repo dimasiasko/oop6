@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\oop6\\Лабораторна робота 8\\Завдання 3\\Завдання 3.csproj": {}
+    "D:\\oop6\\Лабораторна робота №8\\Завдання 3\\Завдання 3.csproj": {}
   },
   "projects": {
-    "D:\\oop6\\Лабораторна робота 8\\Завдання 3\\Завдання 3.csproj": {
+    "D:\\oop6\\Лабораторна робота №8\\Завдання 3\\Завдання 3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\oop6\\Лабораторна робота 8\\Завдання 3\\Завдання 3.csproj",
+        "projectUniqueName": "D:\\oop6\\Лабораторна робота №8\\Завдання 3\\Завдання 3.csproj",
         "projectName": "Завдання 3",
-        "projectPath": "D:\\oop6\\Лабораторна робота 8\\Завдання 3\\Завдання 3.csproj",
-        "packagesPath": "C:\\Users\\Dmytro Siasko\\.nuget\\packages\\",
-        "outputPath": "D:\\oop6\\Лабораторна робота 8\\Завдання 3\\obj\\",
+        "projectPath": "D:\\oop6\\Лабораторна робота №8\\Завдання 3\\Завдання 3.csproj",
+        "packagesPath": "C:\\Users\\Сясько\\.nuget\\packages\\",
+        "outputPath": "D:\\oop6\\Лабораторна робота №8\\Завдання 3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dmytro Siasko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Сясько\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +52,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

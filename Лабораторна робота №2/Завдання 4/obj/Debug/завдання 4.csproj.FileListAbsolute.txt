@@ -1,0 +1,20 @@
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.exe.config
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.exe
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.pdb
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.csproj.CoreCompileInputs.cache
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.exe
+C:\Users\Дмитрий Сясько\source\repos\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.pdb
+D:\лабкі с#\oop6\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.exe.config
+D:\лабкі с#\oop6\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.exe
+D:\лабкі с#\oop6\Лабораторна робота 1\завдання 4\bin\Debug\завдання 4.pdb
+D:\лабкі с#\oop6\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.csprojAssemblyReference.cache
+D:\лабкі с#\oop6\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.csproj.CoreCompileInputs.cache
+D:\лабкі с#\oop6\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.exe
+D:\лабкі с#\oop6\Лабораторна робота 1\завдання 4\obj\Debug\завдання 4.pdb
+D:\oop6\Лабораторна робота №2\завдання 4\bin\Debug\завдання 4.exe.config
+D:\oop6\Лабораторна робота №2\завдання 4\bin\Debug\завдання 4.exe
+D:\oop6\Лабораторна робота №2\завдання 4\bin\Debug\завдання 4.pdb
+D:\oop6\Лабораторна робота №2\завдання 4\obj\Debug\завдання 4.csprojAssemblyReference.cache
+D:\oop6\Лабораторна робота №2\завдання 4\obj\Debug\завдання 4.csproj.CoreCompileInputs.cache
+D:\oop6\Лабораторна робота №2\завдання 4\obj\Debug\завдання 4.exe
+D:\oop6\Лабораторна робота №2\завдання 4\obj\Debug\завдання 4.pdb
