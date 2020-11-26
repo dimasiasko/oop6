@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\c#\\oop6\\Лабораторна робота №2\\Завдання 1\\Завдання 1.csproj",
+      "projectUniqueName": "D:\\oop6\\Лабораторна робота №4\\Завдання 1\\Завдання 1.csproj",
       "projectName": "Завдання 1",
-      "projectPath": "D:\\c#\\oop6\\Лабораторна робота №2\\Завдання 1\\Завдання 1.csproj",
+      "projectPath": "D:\\oop6\\Лабораторна робота №4\\Завдання 1\\Завдання 1.csproj",
       "packagesPath": "C:\\Users\\Сясько\\.nuget\\packages\\",
-      "outputPath": "D:\\c#\\oop6\\Лабораторна робота №2\\Завдання 1\\obj\\",
+      "outputPath": "D:\\oop6\\Лабораторна робота №4\\Завдання 1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Сясько\\AppData\\Roaming\\NuGet\\NuGet.Config",

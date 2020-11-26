@@ -10,11 +10,11 @@
         "projectUniqueName": "D:\\oop6\\Лабораторна робота №5\\Завдання 3\\Завдання 3.csproj",
         "projectName": "Завдання 3",
         "projectPath": "D:\\oop6\\Лабораторна робота №5\\Завдання 3\\Завдання 3.csproj",
-        "packagesPath": "C:\\Users\\Dmytro Siasko\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Сясько\\.nuget\\packages\\",
         "outputPath": "D:\\oop6\\Лабораторна робота №5\\Завдання 3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Dmytro Siasko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Сясько\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

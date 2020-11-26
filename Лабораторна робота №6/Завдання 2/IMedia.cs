@@ -6,6 +6,6 @@ namespace Завдання_2
 {
     public interface IMedia
     {
-
+        public void InitalizeMedia(){}
     }
 }

@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Dmytro Siasko\\.nuget\\packages\\": {}
+    "C:\\Users\\Сясько\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\oop6\\Лабораторна робота 6\\Завдання 2\\Завдання 2.csproj",
+      "projectUniqueName": "D:\\oop6\\Лабораторна робота №6\\Завдання 2\\Завдання 2.csproj",
       "projectName": "Завдання 2",
-      "projectPath": "D:\\oop6\\Лабораторна робота 6\\Завдання 2\\Завдання 2.csproj",
-      "packagesPath": "C:\\Users\\Dmytro Siasko\\.nuget\\packages\\",
-      "outputPath": "D:\\oop6\\Лабораторна робота 6\\Завдання 2\\obj\\",
+      "projectPath": "D:\\oop6\\Лабораторна робота №6\\Завдання 2\\Завдання 2.csproj",
+      "packagesPath": "C:\\Users\\Сясько\\.nuget\\packages\\",
+      "outputPath": "D:\\oop6\\Лабораторна робота №6\\Завдання 2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Dmytro Siasko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Сясько\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
